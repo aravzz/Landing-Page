@@ -364,12 +364,6 @@ footer p
     transform: translateX(0);
 }
 
-@media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
-}
-
 .parent:nth-child(2) {
     transition-delay: 200ms;
 }
@@ -377,3 +371,53 @@ footer p
 .parent:nth-child(3){
     transition-delay: 400ms;
 }
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+@media(max-width: 800px){
+    .sec h2, .sec p
+    {
+        padding: 0 2rem 0 0;
+    }
+    .sec img 
+    {
+        max-width: 13em;
+    }
+    .photos img
+    {
+        max-height: 11em;
+        max-width: 11em;
+    }
+    .photos
+    {flex-direction: column;}
+    .contact 
+    {
+        column-gap: 2rem;
+        padding: 0.5rem;
+    }
+    .contact h3
+    {
+        bottom: 23em;
+    }
+    .loc, .horario, .sm
+    {
+        min-width:7em;
+        text-align: center;
+    }
+    .loc button
+    {
+        min-width: 8em;
+    }
+    footer p
+    {
+        font-size: 0.8rem;
+    }
+    #text2
+    {
+        top: 18em;
+    }
+}
+
