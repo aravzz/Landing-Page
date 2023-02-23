@@ -6,10 +6,10 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body
 {
-    min-height: 100vh;
     background: #333;
     overflow-x: hidden;
     font-family: 'Aboreto', cursive;
@@ -59,7 +59,6 @@ section
     position: relative;
     width: 100%;
     min-height: 60vh;
-    padding: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +85,7 @@ min-height: 60vh;
     position: absolute;
     color: #fff;
     white-space: nowrap;
-    font-size: 7.5vw;
+    font-size: 4rem;
     z-index: 9;
 
 }
@@ -96,9 +95,9 @@ min-height: 60vh;
   position: absolute;
     color: #fff;
     white-space: nowrap;
-    font-size: 5vw;
+    font-size: 2rem;
     z-index: 9;
-    top: 4em;
+    top: 8rem;
 }
 
 .sec
@@ -109,7 +108,7 @@ min-height: 60vh;
     place-items: center;
     place-content: center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10em 15em;
+    grid-template-rows: 9em 15em;
     grid-template-areas: "sec-h2 sec-img"
                          "sec-p sec-img";
     padding: 5em;
@@ -120,10 +119,13 @@ min-height: 60vh;
 .sec img
 {
     grid-area: sec-img;
+    position: absolute;
     max-width: 17em;
     max-height: 22em;
     outline: 1px solid black;
     outline-offset: 1em;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .sec h2 
@@ -165,7 +167,7 @@ min-height: 60vh;
     justify-content: center;
     align-items: center;
     background: linear-gradient(transparent, white);
-    max-height: 75vh;
+    max-height: 80vh;
 }
 
 .promo h2
@@ -175,12 +177,14 @@ min-height: 60vh;
     font-size: 3rem;
     padding-left: 1rem;
     margin: 1.5rem;
+    max-width: 10em;
 }
 
 .swiper
 {
     max-height: 30em;
     min-width: 30em;
+    margin: 1rem 0;
 }
 
 .swiper .swiper-pagination-bullet-active 
@@ -298,7 +302,7 @@ footer
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    height: 50vh;
+    max-height: 55vh;
     background-color: black;
 }
 
@@ -375,13 +379,23 @@ footer p
 }
 
 @media(max-width: 800px){
-    .sec h2, .sec p
+    .sec{
+        grid-template-rows: 8em 9em;
+    }
+    .sec h2
     {
-        padding: 0 2rem 0 0;
+        padding: 0 4rem 2rem 0;
+        font-size: 1rem;
+    }
+    .sec p
+    {
+        font-size: 1rem;
+        padding: 1.5rem 2rem 0 0;
     }
     .sec img 
     {
-        max-width: 13em;
+        max-width: 10em;
+        outline-offset: 0;
     }
     .photos img
     {
@@ -397,24 +411,20 @@ footer p
     }
     .contact h3
     {
-        bottom: 23em;
+        bottom: 20em;
     }
     .loc, .horario, .sm
     {
-        min-width:7em;
+        max-width:7em;
         text-align: center;
     }
     .loc button
     {
         min-width: 8em;
     }
-    footer p
-    {
-        font-size: 0.8rem;
-    }
     #text2
     {
-        top: 18em;
+        top: 8.5em;
     }
     .promo
     {
@@ -431,10 +441,20 @@ footer p
         max-height: 20em;
         min-width: 20em;
         right: 1rem;
+        margin-top: 2rem;
     }
     footer p
     {
         font-size: 0.5rem;}
+    
+    footer li a
+    {
+        font-size: 0.7rem;
+    }
+    footer .logo
+    {
+       min-height: 3em; 
+    }
     }
 
 
